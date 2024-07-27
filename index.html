@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+
+
+
+        <div class="container">
+            <h4>Me das el chiquito?</h4>
+
+
+            <div class="container-btn">
+                <button id="no-click">NO!</button>
+                <button id="si-click">SI</button>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        const noClickBtn = document.querySelector('#no-click')
+        noClickBtn.style.position = 'absolute'
+
+        noClickBtn.addEventListener("click", clickBtn)
+        // javascript
+        /**
+         * @param {}
+         * */
+        function clickBtn(event) {
+            console.log({ target: event.target})
+
+            noClickBtn.style.top = Math.random() * window.innerHeight + "px"
+            noClickBtn.style.left = Math.random() * window.innerWidth + "px"
+            
+        }
+
+        document.querySelector('#si-click').addEventListener("click", function() {
+            alert('Sabia que no te ibas a negar, cuando lo hacemos?')
+        })
+    </script>
+</body>
+</html>
